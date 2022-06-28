@@ -14,5 +14,5 @@ No olvidar correr, para descargarse todas las dependencias
 ## Para correr el proyecto
 
 ```bash
-  npm run start
+  npm start
 ```
