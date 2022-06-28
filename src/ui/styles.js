@@ -157,3 +157,26 @@ export const MainGrid = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, 1fr);
 `;
+
+export const LoginContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & h1 {
+    font-size: 4rem;
+  }
+`;
+
+export const ButtonSign = styled.button`
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  gap: 1rem;
+  border: none;
+  background-color: #4885ed;
+  color: white;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+`;

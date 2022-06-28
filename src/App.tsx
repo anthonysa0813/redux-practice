@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoginPage } from "./components/LoginPage";
 import MainPage from "./components/MainPage";
+import PrivateRoute from "./components/PrivateRoute";
 import store from "./store";
 
 const App = () => {
@@ -11,8 +12,15 @@ const App = () => {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<LoginPage/>} />
-          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <MainPage />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </Provider>
