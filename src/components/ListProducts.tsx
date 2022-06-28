@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { addProduct, getProductSelector } from "../products/productslices";
 import { useAppDispatch } from "../store.hooks";
 import { productsData } from "../products/data";
+import { CardContainer } from "../ui/styles";
 interface ProductListProps {}
 
 const ListProducts: React.FC<ProductListProps> = ({}) => {
@@ -12,7 +13,7 @@ const ListProducts: React.FC<ProductListProps> = ({}) => {
   console.log({ products });
   return (
     <>
-      <div className="cardContainer">
+      <CardContainer>
         {products.map((product: any) => (
           <div className="productCard " key={product.id}>
             <div className="cardImage">
@@ -35,7 +36,7 @@ const ListProducts: React.FC<ProductListProps> = ({}) => {
             </div>
           </div>
         ))}
-      </div>
+      </CardContainer>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { ListRestContainer, MenuBox } from "../ui/styles";
 
 const ListRestaurants = () => {
   const menuCart = [
@@ -37,7 +38,7 @@ const ListRestaurants = () => {
   ];
 
   return (
-    <div className="listRestaurantContainer ">
+    <ListRestContainer>
       <div className="headListRestaurant">
         <h2>
           Restaurants
@@ -51,18 +52,18 @@ const ListRestaurants = () => {
       <div className="menuList ">
         {menuCart.map((cart) => {
           return (
-            <div className="menuBox">
+            <MenuBox>
               <div className="iconBox">
                 <i className={cart.iconName}></i>
               </div>
               <div className="menuTitle">
                 <span>{cart.title}</span>
               </div>
-            </div>
+            </MenuBox>
           );
         })}
       </div>
-    </div>
+    </ListRestContainer>
   );
 };
 

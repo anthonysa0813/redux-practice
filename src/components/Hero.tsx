@@ -1,8 +1,9 @@
 import React from "react";
 import heroImage from "../assets/images/headerimage.png";
+import { HeroContainer } from "../ui/styles";
 const Hero = () => {
   return (
-    <div className="hero">
+    <HeroContainer>
       <img src={heroImage} alt="hero image" />
       <div className="titleHero">
         <h2>$0 delivery for 30 days!</h2>
@@ -11,7 +12,7 @@ const Hero = () => {
       <div className="actionHero">
         <a href="">Learn more</a>
       </div>
-    </div>
+    </HeroContainer>
   );
 };
 

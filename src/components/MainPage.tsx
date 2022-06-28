@@ -1,4 +1,5 @@
 import React from "react";
+import { MainGrid } from "../ui/styles";
 import Cart from "./Cart";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -7,7 +8,7 @@ import ListRestaurants from "./ListRestaurants";
 
 const MainPage = () => {
   return (
-    <div className="mainGrid">
+    <MainGrid>
       <div className="main ">
         <Header />
         <Hero />
@@ -17,7 +18,7 @@ const MainPage = () => {
       <div className="sidebar ">
         <Cart />
       </div>
-    </div>
+    </MainGrid>
   );
 };
 

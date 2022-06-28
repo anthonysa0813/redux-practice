@@ -1,8 +1,9 @@
 import React from "react";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { HeaderContainer } from "../ui/styles";
 const Header = () => {
   return (
-    <header className="">
+    <HeaderContainer className="">
       <div className="headerContainer ">
         <AiOutlineMenuUnfold />
         <h1>Chukwudi</h1>
@@ -10,7 +11,7 @@ const Header = () => {
           <input type="text" />
         </div>
       </div>
-    </header>
+    </HeaderContainer>
   );
 };
 

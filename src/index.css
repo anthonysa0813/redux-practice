@@ -21,10 +21,6 @@ code {
 }
 
 .mainGrid {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
 }
 
 .main {
@@ -49,25 +45,6 @@ header {
   margin: 0 auto;
 }
 
-.inputSearch {
-  flex: 1 0 30%;
-}
-.inputSearch input {
-  padding: 0.5rem 0.75rem;
-  width: 70%;
-  display: block;
-  border: none;
-  outline: none;
-  padding: 1rem;
-  background-color: #f4f1f1;
-  border-radius: 0.75rem;
-}
-
-.headerContainer {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-}
 /* header end */
 
 /* hero start */

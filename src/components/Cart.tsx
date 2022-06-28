@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getProductSelector } from "../products/productslices";
+import {
+  AsideCart,
+  CartCircle,
+  CartTotal,
+  ListContent,
+  OrderAddress,
+  OrderInfo,
+} from "../ui/styles";
 import ListProducts from "./ListProducts";
 
 const Cart = () => {
@@ -15,15 +23,15 @@ const Cart = () => {
   }, [products]);
 
   return (
-    <div className="AsideCart">
+    <AsideCart>
       <div className="headAsideCart ">
         <i className="icon-user"></i>
-        <span className="cartCircle">{products.length}</span>
+        <CartCircle>{products.length}</CartCircle>
       </div>
       <div className="orderInfo">
         <h1>My order</h1>
 
-        <div className="orderAddress">
+        <OrderInfo>
           <div className="direction">
             <p>625 St. Marks Ave</p>
             <p className="btn">Edit</p>
@@ -33,9 +41,9 @@ const Cart = () => {
             <p>35min</p>
             <p className="btn">Choose Time</p>
           </div>
-        </div>
+        </OrderInfo>
 
-        <div className="listContent">
+        <ListContent>
           {products.map((product: any) => {
             return (
               <div className="orderList ">
@@ -51,14 +59,14 @@ const Cart = () => {
               </div>
             );
           })}
-        </div>
+        </ListContent>
 
-        <div className="cartTotal">
+        <CartTotal>
           <h3>Total</h3>
           <h3>${totalPrice}</h3>
-        </div>
+        </CartTotal>
       </div>
-    </div>
+    </AsideCart>
   );
 };
 
