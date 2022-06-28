@@ -1,13 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.debug {
+  border: 3px solid brown;
+}
+
+.mainGrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.main {
+  grid-column: 1/10;
+  padding: 2rem;
+  grid-row: 1/-1;
+}
+
+.sidebar {
+  grid-column: 10/-1;
+  grid-row: 1/-1;
+}
+
+/* header start */
+
+header {
+  padding: 1rem;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.inputSearch {
+  flex: 1 0 30%;
+}
+.inputSearch input {
+  padding: 0.5rem 0.75rem;
+  width: 70%;
+  display: block;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: #f4f1f1;
+  border-radius: 0.75rem;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+/* header end */
+
+/* hero start */
+
+.hero {
+  display: flex;
+  background-color: rgb(255, 251, 241);
+  border-radius: 1rem;
+  height: 250px;
+}
+
+.hero img {
+  flex: 1 0 33.3%;
+  object-fit: cover;
+}
+.hero .titleHero {
+  flex: 1 0 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .actionHero {
+  flex: 1 0 33.3%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* hero end */
+
+/* list restaurant start */
+
+.listRestaurantContainer {
+}
+
+.headListRestaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headListRestaurant button {
+  padding: 0.75rem;
+  border-radius: 2rem;
+  background-color: orangered;
+  color: white;
+  border: none;
+  outline: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menuList {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.menuBox {
+  padding: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  align-items: center;
+}
+
+.iconBox {
+  border: 1px solid;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.menuBox:first-of-type {
+  background-color: yellow;
+}
+
+.menuBox:first-of-type .iconBox {
+  background-color: white;
+}
+
+/* list restaurant end */
+
+/* List Products start */
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-block-start: 2rem;
+}
+
+.productCard {
+  height: 100px;
+}
+
+.productCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.cardInfo button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+}
+/* List products end */
+
+/* Cart */
+
+.headAsideCart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.cartCircle {
+  background-color: yellow;
+  padding: 1rem;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderAddress {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(93, 1, 212);
+}
+
+.direction,
+.orderTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  color: yellow;
+}
+
+.orderAddress {
+  margin-block-end: 2rem;
+}
+
+.orderList {
+  display: flex;
+  margin-block-start: 1rem;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.orderList .imageProd {
+  width: 100px;
+  height: 70px;
+}
+
+.imageProd img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.listContent {
+  height: 50vh;
+  overflow: auto;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+  padding-inline: 1rem;
 }

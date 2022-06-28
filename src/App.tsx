@@ -1,15 +1,20 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import reducer from "./reducers/tiendaReducer";
+// import { createStore } from "redux";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
+import store from "./store";
 
 const App = () => {
-  const store = createStore(reducer);
-  console.log(store.getState());
-
   return (
     <Provider store={store}>
-      <h1>jiji</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<h1>login :D</h1>} />
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   );
 };
